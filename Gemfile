@@ -1,12 +1,23 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.4'
-gem 'nifty-generators'
+group :development do
+	gem 'rails', '3.0.4'
+	gem 'nifty-generators'
+	gem 'mysql2'
+end
+
+group :test do
+	gem 'capybara'
+	gem 'database_cleaner'
+	gem 'cucumber-rails'
+	gem 'cucumber'
+	gem 'rspec-rails'
+	gem 'spork'
+	gem 'launchy'
+end
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'mysql2'
 
 # Use unicorn as the web server
 # gem 'unicorn'
