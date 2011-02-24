@@ -14,6 +14,7 @@ group :test do
 	gem 'rspec-rails'
 	gem 'spork'
 	gem 'launchy'
+	gem 'factory_girl_rails'
 end
 
 # Bundle edge Rails instead:
