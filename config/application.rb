@@ -32,10 +32,11 @@ module Lojadecarros
 
     # JavaScript files you want as :defaults (application.js is always included).
     # config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
-		config.generators do |g|
-			g.test_framework :rspec, :fixture => false, :views => false
-		end
+	config.generators do |g|
+	   g.test_framework :rspec, :fixture => false, :views => false
+	end
 
+    config.active_record.observers = :carro_observer
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 

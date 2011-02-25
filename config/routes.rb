@@ -1,6 +1,6 @@
 Lojadecarros::Application.routes.draw do
   resources :carros
-
+  match 'carros/busca' => 'carros#busca'
 	root :to => "carros#index"
 	resources :carros
   # The priority is based upon order of creation:

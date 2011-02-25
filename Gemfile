@@ -1,9 +1,11 @@
 source 'http://rubygems.org'
 
-group :development do
+group :development, :test do
+	gem 'will_paginate', '2.3.15'
+	gem 'thinking-sphinx', :require => 'thinking_sphinx'
+	gem 'mysql2'
 	gem 'rails', '3.0.4'
 	gem 'nifty-generators'
-	gem 'mysql2'
 end
 
 group :test do

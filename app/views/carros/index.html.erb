@@ -27,7 +27,11 @@
 
 <div id="busca">
 	<strong>Carros a venda</strong>
-	<br />
+	<br /><br />
+	<%= form_tag :controller => 'carros', :action => 'busca' do %>
+		<%= text_field_tag 'busca', nil, :class => 'button-search' %>
+		<%= submit_tag "busca", :disable_with => "...", :class => 'buscar' %>
+	<% end %>
 
 	<% unless @carros.blank? %>
 		<% @carros.each do |carro| %>
@@ -40,3 +44,5 @@
 		<p>Nenhum carro cadastrado.</p>
 	<% end %>
 </div>
+
+<%= will_paginate @carros %>
