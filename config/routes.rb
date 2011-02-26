@@ -1,8 +1,9 @@
 Lojadecarros::Application.routes.draw do
-  resources :carros
+  match 'carros/feed(.:format)' => 'carros#feed', :as => 'feed'
   match 'carros/busca' => 'carros#busca'
-	root :to => "carros#index"
-	resources :carros
+  resources :carros
+  root :to => "carros#index"	
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

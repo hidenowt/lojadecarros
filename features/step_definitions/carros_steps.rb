@@ -21,3 +21,11 @@ Dado /^que os seguintes carros existem:$/ do |tabela|
   	carro.save
   end
 end
+
+Dado /^clico no link "([^"]*)"$/ do |link|
+  click_link(link)
+end
+
+Entao /^o rss deve ser:$/ do |text|
+  page.body.gsub(/[\n\s]/,'').should == text.gsub(/[\n\s]/,'')
+end

@@ -1,4 +1,5 @@
 class CarrosController < ApplicationController
+	respond_to :rss, :only => :feed
 
 	def index
 		@carro  = Carro.new
@@ -20,5 +21,12 @@ class CarrosController < ApplicationController
 									   :order 	  => :created_at,
 									   :sort_mode => :desc
 		render :action => 'index'
+	end
+
+	# outras actions
+	def feed
+		@carros = Carro.all
+
+		respond_with @carros
 	end
 end

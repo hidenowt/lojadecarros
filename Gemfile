@@ -6,6 +6,7 @@ group :development, :test do
 	gem 'mysql2'
 	gem 'rails', '3.0.4'
 	gem 'nifty-generators'
+	gem 'restfulie'
 end
 
 group :test do

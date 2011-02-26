@@ -22,3 +22,24 @@ Funcionalidade: Carros
 		E preencho o campo "busca" com "monza"
 		E clico no botao "busca"
 		Entao eu deveria ver "monza"
+
+	Cenario: Feeds
+		Dado que os seguintes carros existem:
+		| nome  | preco | descricao |
+		| monza | 1000  | velho     |
+		E clico no link "RSS"
+		Entao o rss deve ser:
+		"""
+		<rss version="2.0">
+		  <channel>
+		    <title>Loja de carros</title>
+		    <link>http://localhost:3000/</link>
+		    <description>RSS da loja de carros</description>
+		    <language>pt-br</language>
+		    <item>
+		      <title>monza</title>
+		      <description>velho</description>
+		    </item>
+		  </channel>
+		</rss>
+		"""
