@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
 
+gem 'rcov', '0.9.9'
+
 group :development, :test do
 	gem 'will_paginate', '2.3.15'
 	gem 'thinking-sphinx', :require => 'thinking_sphinx'
@@ -7,6 +9,7 @@ group :development, :test do
 	gem 'rails', '3.0.4'
 	gem 'nifty-generators'
 	gem 'restfulie'
+	gem 'devise'
 end
 
 group :test do

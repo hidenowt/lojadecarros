@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Untitled</title>
+    <link href="/stylesheets/all.css?1298415933" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js?1298414213" type="text/javascript"></script>
+    <meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="jMZXcc2uNERkntmKn9vK0zNJ1UuARX2IODp3fdCLlzk="/>
+    
+  </head>
+  <body>
+    <div id="container">
+
+       <p class="notice"></p>
+       <p class="alert"></p>
+
+
+      <a href="/?locale=en">US</a>
+      <a href="/?locale=pt">PT</a>
+      <a href="/carros/feed.rss">RSS</a>
+
+
+
+
+      
+      
+	<div id="form">
+		<form accept-charset="UTF-8" action="/carros" class="new_carro" id="new_carro" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="jMZXcc2uNERkntmKn9vK0zNJ1UuARX2IODp3fdCLlzk=" /></div>
+		<strong>Quer vender ?</strong>
+		<br /><br />
+
+		<label for="carro_nome">Nome</label><br />
+		<input class="button-input" id="carro_nome" name="carro[nome]" size="30" type="text" />
+		<br />
+
+		<label for="carro_descricao">Descricao</label><br />
+		<textarea cols="26" id="carro_descricao" name="carro[descricao]" rows="9"></textarea>
+		<br />
+
+		<label for="carro_preco">Preco</label><br />
+		<input class="button-input" id="carro_preco" name="carro[preco]" size="30" type="text" />
+		<br />
+
+		<input class="anunciar" data-disable-with="..." id="carro_submit" name="commit" type="submit" value="Anunciar!" />
+
+</form>	</div>
+
+<div style="clear:both"></div>
+
+<br />
+
+<div id="busca">
+	<strong>Carros a venda</strong>
+	<br /><br />
+	<form accept-charset="UTF-8" action="/carros/busca" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="jMZXcc2uNERkntmKn9vK0zNJ1UuARX2IODp3fdCLlzk=" /></div>
+		<input class="button-search" id="busca" name="busca" type="text" />
+		<input class="buscar" data-disable-with="..." name="commit" type="submit" value="busca" />
+</form>
+			<br />
+			<b>Lamborghini</b><br />
+			é o carro<br />
+			R$ 1,000,000.00<br />
+			<br />
+			<b>GTO V8</b><br />
+			carro 10 segundos<br />
+			R$ 54,000.00<br />
+			<br />
+			<b>Mustang</b><br />
+			carrao do caraleo<br />
+			R$ 32,000.00<br />
+</div>
+
+<div class="pagination"><span class="disabled prev_page">&laquo; Previous</span> <span class="current">1</span> <a href="/carros?page=2" rel="next">2</a> <a href="/carros?page=3">3</a> <a href="/carros?page=2" class="next_page" rel="next">Next &raquo;</a></div>
+    </div>
+    <div id="footer" class="blue-style">
+      <p>Loja de Carros | Caelum | Ruby on Rails | RR-75 | 2009</p>
+      <p></p>
+      <p>Projeto desenvolvido por Herminio Torres na caelum</p>
+    </div>
+	 <pre class='debug_dump'>--- !map:ActiveSupport::HashWithIndifferentAccess 
+action: index
+controller: carros
+</pre>
+  </body>
+</html>

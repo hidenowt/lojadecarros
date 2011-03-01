@@ -1,5 +1,7 @@
 class CarrosController < ApplicationController
 	respond_to :rss, :only => :feed
+	caches_page :index
+	cache_sweeper :carro_sweeper
 
 	def index
 		@carro  = Carro.new

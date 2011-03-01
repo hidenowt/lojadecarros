@@ -1,4 +1,6 @@
 Lojadecarros::Application.routes.draw do
+  devise_for :users
+
   match 'carros/feed(.:format)' => 'carros#feed', :as => 'feed'
   match 'carros/busca' => 'carros#busca'
   resources :carros

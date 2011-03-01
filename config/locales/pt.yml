@@ -1,0 +1,8 @@
+pt:
+  titulo: "Loja de Carros"
+  activerecord:
+    models:
+      carro:
+        nome: Nome
+        preco: Preço
+        descricao: Descrição

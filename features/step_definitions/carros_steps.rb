@@ -29,3 +29,20 @@ end
 Entao /^o rss deve ser:$/ do |text|
   page.body.gsub(/[\n\s]/,'').should == text.gsub(/[\n\s]/,'')
 end
+
+Dado /^que existe o usuario:$/ do |tabela|
+  tabela.hashes.each do |hash|
+    hash.merge! :password_confirmation => hash[:password]
+    User.create! hash
+  end
+end
+
+Dado /^estou logado como "([^"]*)"$/ do |email|
+  User.create! :email                 => 'herminio@herminio.com.br',
+               :password              => '123456',
+               :password_confirmation => '123456'
+  click_link('Login')
+  fill_in('user[email]',    :with => 'herminio@herminio.com.br')
+  fill_in('user[password]', :with => '123456')
+  click_button 'Sign in'
+end
